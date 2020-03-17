@@ -28,5 +28,6 @@ phases:
       - printf '[{"name":"hello-world","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
 artifacts:
     files: 
-      - imagedefinitions.json 
+      - imagedefinitions.json
+      - build_output/*
       
