@@ -1,3 +1,2 @@
 FROM ubuntu:18.04
-COPY count/bin/Debug/netcoreapp3.0/ count/
-ENTRYPOINT ["dotnet", "./count.dll"]
+COPY /codebuild/output/src386343847/src/bin/Debug/netcoreapp3.0/ count/
