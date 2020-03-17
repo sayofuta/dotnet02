@@ -14,7 +14,7 @@ phases:
       - IMAGE_TAG=count
   build:
     commands:
-      - dotnet publish -o ./app
+      - dotnet publish -o ./build_output
       - echo Build started on `date`
       - echo Building the Docker image...
       - docker build -t $REPOSITORY_URI:latest .
@@ -27,4 +27,6 @@ phases:
       - echo Writing image definitions file...
       - printf '[{"name":"hello-world","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
 artifacts:
-    files: imagedefinitions.json
+    files: 
+      - imagedefinitions.json 
+      - CodeBuild-SampleCore/build_output/**/*
