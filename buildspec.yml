@@ -14,7 +14,7 @@ phases:
       - IMAGE_TAG=count
   build:
     commands:
-      - dotnet publish -o ./build_output count.csproj
+      - dotnet publish -o /build_output count.csproj
       - echo Build started on `date`
       - echo Building the Docker image...
       - docker build -t $REPOSITORY_URI:latest .
@@ -29,4 +29,4 @@ phases:
 artifacts:
     files: 
       - imagedefinitions.json 
-      - CodeBuild-SampleCore/build_output/**/*
+      - /build_output/**/*
