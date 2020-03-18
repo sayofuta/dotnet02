@@ -15,7 +15,6 @@ phases:
   build:
     commands:
       - dotnet publish -o ./build_output count.csproj
-      - ls /build_output
       - pwd
       - ls
       - ls ./build_output
