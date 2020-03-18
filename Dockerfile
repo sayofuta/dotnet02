@@ -7,4 +7,4 @@ RUN apt-get -y install software-properties-common
 RUN apt-get update
 RUN apt-get -y install apt-transport-https
 RUN apt-get update
-RUN apt-get install dotnet-sdk-3.0
+RUN apt-get -y install dotnet-sdk-3.0
