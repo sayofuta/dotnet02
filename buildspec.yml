@@ -11,10 +11,10 @@ phases:
       - $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
       - REPOSITORY_URI=684956540993.dkr.ecr.ap-northeast-1.amazonaws.com/fsi-test
       - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
-      - IMAGE_TAG=hellolinux
+      - IMAGE_TAG=newhellolinux
   build:
     commands:
-      - dotnet publish -o ./build_output -r linux-x64
+      - dotnet publish -o ./build_output
       - pwd
       - ls
       - ls ./build_output
