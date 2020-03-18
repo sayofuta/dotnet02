@@ -17,6 +17,7 @@ phases:
       - dotnet publish -o /build_output count.csproj
       - ls /build_output
       - pwd
+      - ls
       - echo Build started on `date`
       - echo Building the Docker image...
       - docker build -t $REPOSITORY_URI:latest .
